@@ -2,8 +2,9 @@ package com.pjb.springbootjjwt.service;
 
 import com.pjb.springbootjjwt.entity.User;
 import com.pjb.springbootjjwt.mapper.UserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * @author jinbin
@@ -11,11 +12,14 @@ import org.springframework.stereotype.Service;
  */
 @Service("UserService")
 public class UserService {
-    @Autowired
+
+    @Resource
     UserMapper userMapper;
-    public User findByUsername(User user){
+
+    public User findByUsername(User user) {
         return userMapper.findByUsername(user.getUsername());
     }
+
     public User findUserById(String userId) {
         return userMapper.findUserById(userId);
     }

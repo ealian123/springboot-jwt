@@ -1,11 +1,13 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test?useSSL=false
-    username: root
-    password: ebid$2018
+    url: jdbc:mysql://yjhtest1.mysql.polardb.rds.aliyuncs.com/test?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: yjhuser
+    password: Yjh123Password
+
 mybatis:
   config-location: classpath:mybatis.xml
-debug: true
+#debug: true
+
 server:
   port: 8888
